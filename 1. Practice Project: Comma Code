@@ -1,0 +1,17 @@
+"""
+Created on Thu Jan 20 17:37:37 2022
+
+@author: stevenstewart
+
+This takes a list and converts it to a single string, inserting commas & 'and'
+before the last one.
+"""
+
+def flipper(x):
+    ans=''
+    for i in range(0,len(x)):
+        if i <= len(x)-2:
+            ans = ans + ' '+str(x[i])+','
+        elif i == len(x)-1:
+            ans = ans + ' and ' + str(x[i])
+    return ans
