@@ -37,12 +37,44 @@
 
 # shelfTest.close()
 
-import pprint
+# import pprint
 
-cats = [{"name": "Eve", "desc": "soft"}, {"name": "linx", "desc": "fluffy"}]
+# cats = [{"name": "Eve", "desc": "soft"}, {"name": "linx", "desc": "fluffy"}]
 
-fileTest = open("catTest.py", "w")
+# fileTest = open("catTest.py", "w")
 
-fileTest.write("catsList = " + pprint.pformat(cats) + "\n")
+# fileTest.write("catsList = " + pprint.pformat(cats) + "\n")
 
-fileTest.close()
+# fileTest.close()
+
+# raise Exception("error msg here")
+
+#////////////////////
+
+# import traceback
+
+# try:
+#     raise Exception("this is the error msg")
+# except:
+#     errorFile = open("errorInfo.txt", "w")
+#     errorFile.write(traceback.format_exc())
+#     errorFile.close()
+#     print("Traceback info written to errorInfo.txt")
+
+#////////////////////
+#////////////////////
+
+market_2nd = {'ns': 'green', 'ew': 'red'}
+mission_16th = {'ns': 'red', 'ew': 'green'}
+
+def switchLights(stoplight):
+    for i in stoplight.keys():
+        if stoplight[i] == "green":
+            stoplight[i] == "yellow"
+        elif stoplight[i] == "yellow":
+            stoplight[i] == "red"
+        elif stoplight[i] == "red":
+            stoplight[i] == "green"
+        assert "red" in stoplight.values(), "Neither light is red!" + str(stoplight)
+        
+switchLights(market_2nd)

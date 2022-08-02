@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/Users/stevenstewart/Documents/vscode/Automating-the-Boring-Stuff-main/new.py", line 55, in <module>
+    raise Exception("this is the error msg")
+Exception: this is the error msg
